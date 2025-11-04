@@ -1,0 +1,7 @@
+teacher_day_web/
+├─ main.py
+├─ templates/
+│  └─ index2.html
+├─ static/
+   ├─ style.css
+   └─ fireworks.js
