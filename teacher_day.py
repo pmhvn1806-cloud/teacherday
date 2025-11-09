@@ -3,10 +3,10 @@ from markupsafe import Markup
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def home():
     teacher_name = "Thầy/Cô kính mến"
-    default_message = "Chúc mừng Ngày Nhà giáo Việt Nam 20/11! Kính chúc Thầy/Cô luôn mạnh khỏe, hạnh phúc và thành công trong sự nghiệp trồng người!"
+    default_message = "Chúc mừng Ngày Nhà giáo Việt Nam 20/11! Kính chúc Thầy/Cô luôn mạnh khỏe, hạnh phúc và thành công trong sự nghiệp trồng người!,chúc thầy/cô 8386!"
     message = default_message
     if request.method == "POST":
         message = request.form.get("message", default_message)
@@ -120,12 +120,6 @@ footer{{margin-top:16px;color:#6b6b6b}}
     <div class="card-left">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Vietnamese_teacher_day_20-11.jpg"
            alt="Thầy/Cô" class="teacher-image">
-    </div>
-    <div class="card-right">
-      <p id="message">{message}</p>
-      <form method="post" class="msg-form">
-        <textarea name="message" placeholder="Viết lời chúc..." maxlength="500"></textarea>
-        <button type="submit">Cập nhật lời chúc</button>
       </form>
     </div>
   </main>
@@ -177,4 +171,5 @@ footer{{margin-top:16px;color:#6b6b6b}}
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
