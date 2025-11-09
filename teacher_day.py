@@ -125,7 +125,7 @@ footer{{margin-top:16px;color:#6b6b6b}}
               <div class="card-right">
       <p id="message">{message}</p>
       <form method="post" class="msg-form">
-        <textarea name="message" placeholder="Viết lời chúc..." maxlength="500"></textarea>
+        <textarea name="message" placeholder="có thể viết ví dụ như: " chúc cô 8386 "" maxlength="500"></textarea>
         <button type="submit">Cập nhật lời chúc</button>
       </form>
     </div>
@@ -178,3 +178,4 @@ footer{{margin-top:16px;color:#6b6b6b}}
 
 if __name__ == "__main__":
     app.run(debug=True)
+
